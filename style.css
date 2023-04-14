@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 50.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(270, 20%, 96%);
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  color: #fff;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+/* MAIN PAGE DECORATION */
+
+/* 
+using negative view height makes the objects get higher with the screen getting smaller,
+the opposite for positive view width, since the screen gets smaller the object go more to the side
+*/
+
+main::before {
+  position: absolute;
+  top: -100vh;
+  right: 66vw;
+  z-index: -999;
+  content: "";
+  padding: 80rem 36rem 80rem 36rem;
+  background-color: hsl(276, 55%, 52%);
+  border-radius: 500px;
+}
+
+main::after {
+  position: absolute;
+  bottom: -120vh;
+  left: 70vw;
+  z-index: -999;
+  content: "";
+  padding: 80rem 36rem 80rem 36rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 500px;
+}
+
+/* HERO SECTION */
+
+.hero-container {
+  max-width: 120rem;
+  padding: 6rem;
+  margin: 0.8rem auto auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 12rem;
+}
+
+/* PARAGRAPH SECTION */
+
+h1 {
+  font-weight: 600;
+  font-size: 4.4rem;
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 0.4em;
+}
+
+.main-paragraph {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: hsl(270, 7%, 64%);
+}
+
+/**************************************/
+/* APP SECTION */
+/*************************************/
+
+/* APP OUTLINE */
+
+.app {
+  background-color: hsl(270, 20%, 96%);
+  justify-self: right;
+  width: 35rem;
+  border: 10px solid #fff;
+  border-radius: 40px;
+  box-shadow: 16px 8px 64px 18px rgba(0, 0, 0, 0.2);
+}
+
+.app-inside {
+  border-radius: 40px;
+}
+
+/* TOP PANEL */
+
+.chat-user-info {
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  display: flex;
+  padding: 3.8rem 1.6rem 1.6rem 1.6rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}
+
+.chat-user-info::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  padding: 1.8rem 10rem;
+  border-radius: 40px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #fff;
+}
+
+.user-status {
+  color: hsl(276, 100%, 81%);
+  opacity: 50%;
+  font-size: 1.2rem;
+}
+
+.user-image {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.menu-btn {
+  margin-left: auto;
+}
+
+.back-btn {
+  font-size: 1.6rem;
+}
+
+.menu-btn {
+  font-size: 1.6rem;
+}
+
+/* APP INTERNAL */
+
+.texts-box {
+  padding: 1.4rem;
+  position: relative;
+}
+
+.message {
+  max-width: 60%;
+
+  line-height: 1.2;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 16px;
+}
+
+.received-message:not(.images-grid, .buy-option) {
+  width: max-content;
+  background-color: hsl(206, 6%, 79%);
+  color: hsl(276, 55%, 52%);
+}
+
+.received-message {
+  border-bottom-left-radius: 6px;
+}
+
+.sent-message {
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+}
+
+.sent-message:not(.images-grid, .buy-option) {
+  width: max-content;
+  background-color: #fff;
+  color: hsl(271, 15%, 43%);
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.message-img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.buy-option {
+  display: flex;
+  align-items: center;
+  max-width: 70%;
+  padding: 1.2rem;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}
+
+.price {
+  margin-left: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* MESSAGE BOX */
+
+.sending-message-box {
+  display: flex;
+
+  background-color: #fff;
+  color: hsl(206, 6%, 79%);
+  margin: 0 1.8rem 1.8rem 1.8rem;
+  padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+  border-radius: 24px;
+}
+
+#writing-message-text,
+#writing-message-text:focus {
+  border: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  font-size: 2.2rem;
+
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50%;
+  padding: 0.6rem;
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+
+@media (max-width: 800px) {
+  .hero-container {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+
+  .app {
+    justify-self: center;
+    align-self: center;
+  }
+}

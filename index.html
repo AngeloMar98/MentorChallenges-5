@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Chat App CSS illustration</title>
+  </head>
+  <body>
+    <main>
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="app">
+            <div class="app-inside">
+              <div class="chat-user-info">
+                <button class="back-btn">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+
+                <img class="user-image" src="images/avatar.jpg" />
+
+                <div class="user-info">
+                  <span class="user-name">Samuel Green</span>
+                  <span class="user-status">Available to Walk</span>
+                </div>
+
+                <button class="menu-btn">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="texts-box">
+                <p class="message received-message">
+                  That sounds great. I’d be happy with that.
+                </p>
+                <p class="message received-message">
+                  Could you send over some pictures of your dog, please?
+                </p>
+
+                <div class="message sent-message images-grid">
+                  <img class="message-img" src="images/dog-image-1.jpg" />
+                  <img class="message-img" src="images/dog-image-2.jpg" />
+                  <img class="message-img" src="images/dog-image-3.jpg" />
+                </div>
+                <p class="message sent-message">
+                  Here are a few pictures. She’s a happy girl!
+                </p>
+                <p class="message sent-message">Can you make it?</p>
+                <p class="message received-message">
+                  She looks so happy! The time we discussed works. How long
+                  shall I take her out for?
+                </p>
+
+                <p class="message received-message buy-option">
+                  30 minute walk <span class="price">$29</span>
+                </p>
+                <p class="message received-message buy-option">
+                  1 hour walk <span class="price">$49</span>
+                </p>
+              </div>
+              <form class="sending-message-box">
+                <input
+                  id="writing-message-text"
+                  type="text"
+                  placeholder="Type a message…"
+                  required
+                />
+                <button class="send-btn">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="hero-introduction">
+            <h1>Simple booking</h1>
+            <p class="main-paragraph">
+              Stay in touch with our dog walkers through the chat interface.
+              This makes it easy to discuss arrangements and make bookings. Once
+              the walk has been completed you can rate your walker and book
+              again all through the chat.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
